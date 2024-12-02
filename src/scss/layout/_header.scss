@@ -9,18 +9,10 @@
   }
 
   &__container {
-    max-width: 938px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 17px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 100%;
     align-items: center;
-
-    @include screen(tablet) {
-      padding: 0 35px;
-    }
   }
 }
 
