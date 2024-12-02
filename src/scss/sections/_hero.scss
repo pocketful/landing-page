@@ -1,7 +1,17 @@
-.hero {
-  color: blue;
+@use '../abstracts' as *;
 
-  &__secondary {
-    color: green;
+.hero {
+  height: calc(100vh - $header-s-height);
+  background-image: url('../../assets/images/hero/hero-s.webp');
+  background-size: cover;
+  background-position: center;
+
+  @include screen(tablet) {
+    height: calc(100vh - $header-m-height);
+    background-image: url('../../assets/images/hero/hero-m.webp');
+  }
+
+  @include screen(desktop) {
+    background-image: url('../../assets/images/hero/hero-l.webp');
   }
 }

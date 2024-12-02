@@ -1,1 +1,1 @@
-<div class="hero">hero</div>
+<div class="hero"></div>

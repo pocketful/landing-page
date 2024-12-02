@@ -1,11 +1,11 @@
 @use '../abstracts' as *;
 
 .header {
-  height: 52px;
+  height: $header-s-height;
   background-color: $grey-light;
 
   @include screen(tablet) {
-    height: 80px;
+    height: $header-m-height;
   }
 
   &__container {
