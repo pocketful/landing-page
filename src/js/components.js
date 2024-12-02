@@ -7,6 +7,7 @@ const loadComponent = async (name) => {
 
   try {
     const response = await fetch(`/components/${name}.html`)
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
     const html = await response.text()
     componentCache.set(name, html)
     return html
@@ -17,27 +18,18 @@ const loadComponent = async (name) => {
 }
 
 export const renderComponents = async () => {
-  // Load header
-  const headerHtml = await loadComponent('header')
-  document.querySelector('header').innerHTML = headerHtml
-
-  // Load sections
-  const sections = [
-    'benefits',
-    'blend',
-    'certification',
-    'features',
-    'hero',
-    'process',
-    'subscribe',
-  ]
-
-  for (const section of sections) {
-    const html = await loadComponent(`sections/${section}`)
-    document.querySelector(`.${section}`).innerHTML = html
+  //   const startTime = performance.now()
+  try {
+    const components = document.querySelectorAll('[data-component]')
+    await Promise.all(
+      Array.from(components).map(async (element) => {
+        const name = element.getAttribute('data-component')
+        const html = await loadComponent(name)
+        element.innerHTML = html
+      }),
+    )
+    // console.log(`Components loaded in ${performance.now() - startTime}ms`)
+  } catch (error) {
+    console.error('Failed to render components:', error)
   }
-
-  // Load footer
-  const footerHtml = await loadComponent('footer')
-  document.querySelector('footer').innerHTML = footerHtml
 }
