@@ -3,6 +3,9 @@
 Modern, responsive landing page built with vanilla JavaScript and SCSS, following BEM methodology.
 
 ## 🔧 Technologies used
+- [JavaScript (vanilla)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- Styling: [SCSS](https://sass-lang.com/) with [BEM Methodology](https://getbem.com/)
+- Development server: [http-server](https://github.com/http-party/http-server)
 - Package manager: [pnpm](https://pnpm.io/)
 
 ## 🚀 Getting started
@@ -19,6 +22,17 @@ npm install -g pnpm
 # Verify installations
 node -v  # Should be >= 20.11.1
 pnpm -v  # Should be >= 8.15.8
+
+```
+
+### 🎈 Start the project
+
+```bash
+# Install dependencies
+pnpm i
+
+# Start development server
+pnpm start
 
 ```
 
