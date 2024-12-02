@@ -1,0 +1,32 @@
+@use 'breakpoints' as *;
+@use 'sass:map';
+
+@mixin screen($device, $direction: min) {
+  @if not map.has-key($breakpoints, $device) {
+    @error "Unknown breakpoint `#{$device}`";
+  }
+
+  $breakpoint: map.get($breakpoints, $device);
+
+  @if $direction == min {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @media (max-width: ($breakpoint - 1px)) {
+      @content;
+    }
+  }
+}
+
+/*
+@include screen(tablet) {
+  // >= 768px
+}
+@include screen(desktop) {
+  // >= 992px
+}
+@include screen(desktop, max) {
+  // < 992px
+}
+*/
