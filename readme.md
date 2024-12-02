@@ -3,12 +3,14 @@
 Modern, responsive landing page built with vanilla JavaScript and SCSS, following BEM methodology.
 
 ## 🔧 Technologies used
+
 - [JavaScript (vanilla)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - Styling: [SCSS](https://sass-lang.com/) with [BEM Methodology](https://getbem.com/)
-- Development server: [http-server](https://github.com/http-party/http-server)
+- Development server: [live-server](https://github.com/tapio/live-server)
 - Package manager: [pnpm](https://pnpm.io/)
 
 ### Code quality
+
 - Linting: [ESLint](https://eslint.org/)
 - Formatting: [Prettier](https://prettier.io/)
 - Style linting: [Stylelint](https://stylelint.io/)
