@@ -29,6 +29,15 @@
   &__image {
     height: 48px;
     flex-shrink: 0;
+
+    img {
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(12%) sepia(92%) saturate(4655%)
+          hue-rotate(355deg) brightness(92%) contrast(102%);
+      }
+    }
   }
 
   &__text {
