@@ -53,3 +53,7 @@ $font-weights: (
   font-size: map.get($font-sizes, 'lg');
   letter-spacing: 0;
 }
+
+%text-xs-regular {
+  font-size: map.get($font-sizes, 'xs');
+}
