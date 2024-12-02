@@ -2,9 +2,11 @@
 
 body {
   @extend %body-base;
+
   color: $black;
 }
 
 h2 {
   @extend %heading-base;
+  @extend %text-xl-extrabold;
 }

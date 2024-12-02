@@ -2,16 +2,54 @@
 
 .hero {
   height: calc(100vh - $header-s-height);
-  background-image: url('../../assets/images/hero/hero-s.webp');
-  background-size: cover;
-  background-position: center;
+  position: relative;
 
-  @include screen(tablet) {
-    height: calc(100vh - $header-m-height);
-    background-image: url('../../assets/images/hero/hero-m.webp');
-  }
+  // @include screen(tablet) {
+  //   height: 1024px;
+  // }
 
   @include screen(desktop) {
-    background-image: url('../../assets/images/hero/hero-l.webp');
+    height: 700px;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__text {
+    color: $white;
+    padding: 15px;
+    margin: auto 0;
+  }
+
+  &__btn {
+    margin-bottom: 2.5rem;
+
+    @include screen(tablet) {
+      margin-bottom: 9.5rem;
+    }
+
+    @include screen(desktop) {
+      margin-bottom: 3.125rem;
+    }
   }
 }

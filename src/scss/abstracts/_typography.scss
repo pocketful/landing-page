@@ -41,3 +41,15 @@ $font-weights: (
 %text-sm-semibold {
   font-weight: map.get($font-weights, 'semibold');
 }
+
+%text-xl-extrabold {
+  font-weight: map.get($font-weights, 'extrabold');
+  font-size: map.get($font-sizes, 'xl');
+  line-height: 1.07;
+  letter-spacing: -0.01em;
+}
+
+%text-lg-regular {
+  font-size: map.get($font-sizes, 'lg');
+  letter-spacing: 0;
+}
