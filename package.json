@@ -1,7 +1,10 @@
 {
   "name": "landing-page",
   "version": "1.0.0",
-  "description": "",
+  "engines": {
+    "node": ">=20.11.1",
+    "pnpm": ">=8.15.8"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
