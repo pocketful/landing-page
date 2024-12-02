@@ -8,6 +8,12 @@ Modern, responsive landing page built with vanilla JavaScript and SCSS, followin
 - Development server: [http-server](https://github.com/http-party/http-server)
 - Package manager: [pnpm](https://pnpm.io/)
 
+### Code quality
+- Linting: [ESLint](https://eslint.org/)
+- Formatting: [Prettier](https://prettier.io/)
+- Style linting: [Stylelint](https://stylelint.io/)
+- Pre-commit hooks: [Husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/okonet/lint-staged/)
+
 ## 🚀 Getting started
 
 ### 💻 Prerequisites
