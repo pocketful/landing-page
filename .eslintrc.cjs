@@ -5,10 +5,10 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["eslint:recommended", "plugin:import/recommended"],
-  ignorePatterns: ["dist", ".eslintrc.cjs"],
+  extends: ['eslint:recommended', 'plugin:import/recommended', 'plugin:prettier/recommended'],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-};
+}
