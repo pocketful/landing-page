@@ -15,6 +15,7 @@
     @include screen(tablet) {
       font-size: initial;
       flex-direction: row;
+      padding: 25px;
       gap: 45px;
     }
   }

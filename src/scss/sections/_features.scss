@@ -1,0 +1,117 @@
+@use '../abstracts' as *;
+
+.features {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.features-text {
+  margin-bottom: 40px;
+  padding: 0 5px;
+
+  @include screen(tablet) {
+    max-width: 60%;
+  }
+
+  @include screen(desktop) {
+    max-width: 100%;
+  }
+}
+
+.features-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'fire'
+    'bolt'
+    'running'
+    'virus'
+    'check'
+    'thumb';
+  gap: 30px;
+
+  .fire {
+    grid-area: fire;
+  }
+
+  .bolt {
+    grid-area: bolt;
+  }
+
+  .running {
+    grid-area: running;
+  }
+
+  .virus {
+    grid-area: virus;
+  }
+
+  .check {
+    grid-area: check;
+  }
+
+  .thumb {
+    grid-area: thumb;
+  }
+
+  @include screen(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'running bolt'
+      'thumb virus'
+      'check fire';
+    gap: 40px 35px;
+  }
+
+  @include screen(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'running bolt virus'
+      'thumb check fire';
+    row-gap: 45px;
+  }
+}
+
+.feature-card {
+  display: flex;
+
+  &__image {
+    display: flex;
+    align-items: center;
+    width: 20px;
+    margin-right: 20px;
+    flex-shrink: 0;
+
+    @include screen(tablet) {
+      width: 40px;
+    }
+
+    img {
+      transition: filter 0.2s ease;
+
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(12%) sepia(92%) saturate(4655%)
+          hue-rotate(355deg) brightness(92%) contrast(102%);
+      }
+    }
+  }
+
+  &__text {
+    @extend %text-xs-regular;
+
+    align-self: center;
+    padding-right: 20px;
+
+    @include screen(tablet) {
+      max-width: 180px;
+      font-size: initial;
+      padding-right: 0;
+    }
+  }
+}

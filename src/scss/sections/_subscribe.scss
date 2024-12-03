@@ -19,14 +19,14 @@
     @include screen(tablet) {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: auto auto;
-      gap: 30px;
+      gap: 30px 90px;
+      width: fit-content;
+      margin: 0 auto;
     }
   }
 }
 
 .subscribe-text {
-  @extend %text-lg-semibold;
-
   grid-column: 2 / 3;
   grid-row: 1 / 4;
   transform: rotate(-180deg);
@@ -45,6 +45,10 @@
   align-self: center;
   display: flex;
   gap: 24px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   @include screen(tablet) {
     grid-row: 2 / 3;

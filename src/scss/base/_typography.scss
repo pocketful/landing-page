@@ -1,4 +1,5 @@
 @use '../abstracts' as *;
+@use 'sass:map';
 
 body {
   @extend %body-base;
@@ -9,4 +10,13 @@ body {
 h2 {
   @extend %heading-base;
   @extend %text-xl-extrabold;
+}
+
+h3 {
+  @extend %heading-base;
+  @extend %text-lg-semibold;
+}
+
+b {
+  font-weight: map.get($font-weights, 'semibold');
 }

@@ -39,6 +39,10 @@
     color: $white;
     padding: 15px;
     margin: auto 0;
+
+    @include screen(tablet) {
+      max-width: 600px;
+    }
   }
 
   &__btn {
