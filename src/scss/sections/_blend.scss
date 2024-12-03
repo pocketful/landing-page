@@ -1,0 +1,111 @@
+@use '../abstracts' as *;
+@use 'sass:map';
+
+.blend {
+  background-color: $red-light;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  text-align: center;
+
+  @include screen(tablet) {
+    padding-bottom: 80px;
+  }
+
+  @include screen(desktop) {
+    padding-bottom: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.blend-heading {
+  color: $black;
+  font-size: map.get($font-sizes, 'xxl');
+  padding-bottom: 2.5rem;
+
+  &--red {
+    color: $red;
+  }
+}
+
+.blend-content {
+  @extend %text-xs-regular;
+
+  padding-bottom: 2em;
+
+  @include screen(tablet) {
+    font-size: initial;
+  }
+
+  @include screen(desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 720px;
+    width: 100%;
+  }
+
+  &__text-wrapper {
+    @include screen(tablet) {
+      margin: 0 auto;
+      max-width: 80%;
+    }
+
+    @include screen(desktop) {
+      width: auto;
+      margin: 0;
+      margin-right: 30px;
+      flex: 1;
+      text-align: left;
+      max-width: 347px;
+    }
+  }
+
+  &__figures-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    justify-content: center;
+    gap: 15px 35px;
+  }
+
+  &__title {
+    padding-bottom: 1.5rem;
+
+    @include screen(desktop) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    padding-bottom: 1.4rem;
+
+    &:last-of-type {
+      padding-bottom: 1.9rem;
+
+      @include screen(tablet) {
+        padding-bottom: 3.375rem;
+      }
+
+      @include screen(desktop) {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.blend-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 124px;
+  gap: 3px;
+
+  &__img {
+    mix-blend-mode: multiply;
+    max-width: 112px;
+  }
+}
