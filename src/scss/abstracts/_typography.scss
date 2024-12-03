@@ -1,0 +1,59 @@
+@use 'colors' as *;
+@use 'sass:map';
+
+$font-primary: 'Plus Jakarta Sans', sans-serif;
+$base-font-size: 16px;
+$base-line-height: 1.26;
+$base-letter-spacing: 0.05em;
+$font-sizes: (
+  'xs': 0.875rem,
+  // 14px
+  'sm': 1rem,
+  // 16px base
+  'md': 1.25rem,
+  // 20px
+  'lg': 1.375rem,
+  // 22px
+  'xl': 3rem,
+  // 48px
+  'xxl': 3.125rem, // 50px
+);
+$font-weights: (
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+);
+
+%body-base {
+  font-family: $font-primary;
+  font-size: $base-font-size;
+  font-weight: map.get($font-weights, 'regular');
+  line-height: $base-line-height;
+  letter-spacing: $base-letter-spacing;
+}
+
+%heading-base {
+  text-align: center;
+}
+
+%text-sm-semibold {
+  font-weight: map.get($font-weights, 'semibold');
+}
+
+%text-xl-extrabold {
+  font-weight: map.get($font-weights, 'extrabold');
+  font-size: map.get($font-sizes, 'xl');
+  line-height: 1.07;
+  letter-spacing: -0.01em;
+}
+
+%text-lg-regular {
+  font-size: map.get($font-sizes, 'lg');
+  letter-spacing: 0;
+}
+
+%text-xs-regular {
+  font-size: map.get($font-sizes, 'xs');
+}

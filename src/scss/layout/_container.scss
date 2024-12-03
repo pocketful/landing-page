@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+.container {
+  padding: 0 $padding-s;
+  max-width: $container-max-w;
+  width: 100%;
+  margin: 0 auto;
+
+  @include screen(tablet) {
+    padding: 0 $padding-m;
+  }
+}

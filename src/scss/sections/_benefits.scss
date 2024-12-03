@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+.benefits {
+  background-color: transparent;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include screen(tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1.25rem;
+
+    @include screen(tablet) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    @include screen(desktop) {
+      gap: 1.5rem;
+    }
+  }
+}

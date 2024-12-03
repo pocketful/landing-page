@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.btn {
+  @extend %text-lg-regular;
+
+  background-color: $black-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  width: 360px;
+  height: 54px;
+  border-radius: 15px;
+  border: none;
+  padding: 0 11px;
+  gap: 10px;
+
+  &--secondary {
+    background-color: $red;
+  }
+}
