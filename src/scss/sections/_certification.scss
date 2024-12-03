@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+.certification {
+  background-color: $grey-light;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 25px;
+    gap: 30px;
+
+    @include screen(tablet) {
+      font-size: initial;
+      flex-direction: row;
+      gap: 45px;
+    }
+  }
+
+  &__image {
+    height: 133px;
+
+    @include screen(tablet) {
+      height: 100px;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__text {
+    @extend %text-xs-regular;
+
+    max-width: 350px;
+
+    @include screen(tablet) {
+      font-size: initial;
+    }
+  }
+}
