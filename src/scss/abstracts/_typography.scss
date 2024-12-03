@@ -57,3 +57,9 @@ $font-weights: (
 %text-xs-regular {
   font-size: map.get($font-sizes, 'xs');
 }
+
+%text-lg-semibold {
+  font-size: map.get($font-sizes, 'lg');
+  font-weight: map.get($font-weights, 'semibold');
+  letter-spacing: 0;
+}
