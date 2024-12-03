@@ -8,6 +8,7 @@ Modern, responsive landing page built with vanilla JavaScript and SCSS, followin
 - Styling: [SCSS](https://sass-lang.com/) with [BEM Methodology](https://getbem.com/)
 - Development server: [live-server](https://github.com/tapio/live-server)
 - Package manager: [pnpm](https://pnpm.io/)
+- Slider: [Swiper](https://swiperjs.com/)
 
 ### Code quality
 
