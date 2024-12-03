@@ -24,7 +24,7 @@
     }
   }
 
-  b {
+  strong {
     font-weight: map.get($font-weights, 'bold');
   }
 }
@@ -55,11 +55,15 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    padding-right: 4em;
 
     &--active {
       max-height: fit-content;
       padding-bottom: 2.5em;
     }
+  }
+
+  &__title,
+  &__text-wrapper {
+    padding-right: 4em;
   }
 }

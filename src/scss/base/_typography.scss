@@ -17,6 +17,14 @@ h3 {
   @extend %text-lg-semibold;
 }
 
-b {
+h4 {
+  @extend %text-xs-semibold;
+
+  @include screen(tablet) {
+    font-size: map.get($font-sizes, 'sm');
+  }
+}
+
+strong {
   font-weight: map.get($font-weights, 'semibold');
 }

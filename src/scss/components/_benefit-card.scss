@@ -4,51 +4,38 @@
   background-color: $red-light;
   border-radius: 15px;
   padding: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 6px;
+  height: 100%;
+  justify-content: center;
+
+  @extend %text-xs-regular;
 
   @include screen(desktop) {
+    font-size: initial;
     padding: 1.5rem 0.625rem;
-
-    // height: 98px;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 6px;
-    height: 100%;
-    justify-content: center;
-
-    @include screen(desktop) {
-      flex-direction: row;
-      align-items: center;
-      gap: 15px;
-    }
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
   }
 
   &__image {
     height: 48px;
     flex-shrink: 0;
+    transition: filter 0.1s ease;
 
-    img {
-      transition: filter 0.2s ease;
-
-      &:hover {
-        filter: brightness(0) saturate(100%) invert(12%) sepia(92%) saturate(4655%)
-          hue-rotate(355deg) brightness(92%) contrast(102%);
-      }
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(12%) sepia(92%) saturate(4655%) hue-rotate(355deg)
+        brightness(92%) contrast(102%);
     }
   }
 
   &__text {
-    @extend %text-xs-regular;
-
-    @include screen(tablet) {
-      font-size: initial;
-    }
-
     @include screen(desktop) {
       text-align: left;
+      white-space: pre-line;
     }
   }
 }
