@@ -1,0 +1,65 @@
+@use '../abstracts' as *;
+@use 'sass:map';
+
+.faqs {
+  background-color: $grey-light;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+
+  @include screen(tablet) {
+    padding-top: 2.25rem;
+  }
+
+  &__title {
+    @extend %text-md-extrabold;
+
+    margin-bottom: 2.375rem;
+
+    @include screen(tablet) {
+      font-size: map.get($font-sizes, 'lg');
+      font-weight: map.get($font-weights, 'semibold');
+      line-height: $base-line-height;
+      letter-spacing: 0;
+      margin-bottom: 1em;
+    }
+  }
+
+  b {
+    font-weight: map.get($font-weights, 'bold');
+  }
+}
+
+.faqs-question {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-bottom: 1.4em;
+  }
+
+  &__image {
+    transition: transform 0.3s ease;
+    position: absolute;
+    right: 0;
+
+    &--active {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__text-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-right: 4em;
+
+    &--active {
+      max-height: fit-content;
+      padding-bottom: 2.5em;
+    }
+  }
+}
