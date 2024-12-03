@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+.swiper {
+  width: 100%;
+  mix-blend-mode: multiply;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    width: 170px;
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    padding: 15px;
+    margin-top: 3px;
+  }
+
+  .swiper-pagination {
+    --swiper-pagination-bullet-horizontal-gap: 6px;
+
+    position: static;
+  }
+
+  .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    border: 1px solid $black-light;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $black-light;
+  }
+}

@@ -11,4 +11,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  globals: {
+    Swiper: 'readonly',
+  },
 }
