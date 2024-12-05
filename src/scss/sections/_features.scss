@@ -3,24 +3,21 @@
 .features {
   padding-top: 40px;
   padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
+  &__title {
+    margin-bottom: 40px;
+    padding: 0 5px;
 
-.features-text {
-  margin-bottom: 40px;
-  padding: 0 5px;
+    @include screen(tablet) {
+      max-width: 60%;
+    }
 
-  @include screen(tablet) {
-    max-width: 60%;
-  }
-
-  @include screen(desktop) {
-    max-width: 100%;
+    @include screen(desktop) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -68,8 +65,8 @@
       width: 40px;
     }
 
-    img {
-      transition: filter 0.2s ease;
+    > img {
+      transition: filter 0.1s ease;
 
       &:hover {
         filter: brightness(0) saturate(100%) invert(12%) sepia(92%) saturate(4655%)
@@ -91,27 +88,6 @@
     }
   }
 
-  &__fire {
-    grid-area: fire;
-  }
-
-  &__bolt {
-    grid-area: bolt;
-  }
-
-  &__running {
-    grid-area: running;
-  }
-
-  &__virus {
-    grid-area: virus;
-  }
-
-  &__check {
-    grid-area: check;
-  }
-
-  &__thumb {
-    grid-area: thumb;
-  }
+  $feature-areas: (fire, bolt, running, virus, check, thumb);
+  @include create-grid-areas($feature-areas);
 }

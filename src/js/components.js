@@ -18,7 +18,6 @@ const loadComponent = async (name) => {
 }
 
 export const renderComponents = async () => {
-  //   const startTime = performance.now()
   try {
     const components = document.querySelectorAll('[data-component]')
     await Promise.all(
@@ -28,7 +27,6 @@ export const renderComponents = async () => {
         element.innerHTML = html
       }),
     )
-    // console.log(`Components loaded in ${performance.now() - startTime}ms`)
   } catch (error) {
     console.error('Failed to render components:', error)
   }

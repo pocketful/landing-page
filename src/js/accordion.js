@@ -9,7 +9,7 @@ export const initAccordion = () => {
     trigger.addEventListener('click', () => {
       const isActive = content.classList.contains('faqs-question__text-wrapper--active')
 
-      // close all accordions
+      // Close all accordions
       accordionItems.forEach((otherItem) => {
         const otherContent = otherItem.querySelector('.faqs-question__text-wrapper')
         const otherArrow = otherItem.querySelector('.faqs-question__image')
@@ -18,7 +18,7 @@ export const initAccordion = () => {
         otherArrow.classList.remove('faqs-question__image--active')
       })
 
-      // toggle clicked accordion
+      // Toggle clicked accordion
       if (!isActive) {
         content.classList.add('faqs-question__text-wrapper--active')
         arrow.classList.add('faqs-question__image--active')

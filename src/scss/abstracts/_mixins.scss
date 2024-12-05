@@ -19,14 +19,10 @@
   }
 }
 
-/*
-@include screen(tablet) {
-  // >= 768px
+@mixin create-grid-areas($areas) {
+  @each $area in $areas {
+    &__#{$area} {
+      grid-area: $area;
+    }
+  }
 }
-@include screen(desktop) {
-  // >= 992px
-}
-@include screen(desktop, max) {
-  // < 992px
-}
-*/
