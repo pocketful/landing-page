@@ -20,7 +20,7 @@
     "clean": "rimraf dist",
     "copy:assets": "copyfiles -u 1 \"src/assets/**/*\" dist",
     "build:css": "sass src/scss:dist/css --no-source-map --style=compressed",
-    "build:html": "html-minifier --input-dir src --output-dir dist --collapse-whitespace --remove-comments --file-ext html",
+    "build:html": "html-minifier --input-dir src --output-dir dist --collapse-whitespace --remove-comments --file-ext html && node scripts/update-script.js",
     "build:js": "rollup -c && terser dist/js/bundle.js -o dist/js/bundle.min.js --compress --mangle",
     "build": "npm-run-all clean copy:assets build:css build:html build:js"
   },
