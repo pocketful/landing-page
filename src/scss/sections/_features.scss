@@ -36,30 +36,6 @@
     'thumb';
   gap: 30px;
 
-  .fire {
-    grid-area: fire;
-  }
-
-  .bolt {
-    grid-area: bolt;
-  }
-
-  .running {
-    grid-area: running;
-  }
-
-  .virus {
-    grid-area: virus;
-  }
-
-  .check {
-    grid-area: check;
-  }
-
-  .thumb {
-    grid-area: thumb;
-  }
-
   @include screen(tablet) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
@@ -113,5 +89,29 @@
       font-size: initial;
       padding-right: 0;
     }
+  }
+
+  &__fire {
+    grid-area: fire;
+  }
+
+  &__bolt {
+    grid-area: bolt;
+  }
+
+  &__running {
+    grid-area: running;
+  }
+
+  &__virus {
+    grid-area: virus;
+  }
+
+  &__check {
+    grid-area: check;
+  }
+
+  &__thumb {
+    grid-area: thumb;
   }
 }

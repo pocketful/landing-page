@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+.process-card {
+  @extend %text-xs-regular;
+
+  position: relative;
+  padding-bottom: 1.25rem;
+
+  @include screen(tablet) {
+    font-size: initial;
+  }
+
+  &__image {
+    padding-bottom: 1.25rem;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -35px;
+
+    .process-card:nth-child(even) & {
+      transform: translateX(-50%) scaleX(-1);
+    }
+  }
+
+  &:nth-child(odd) {
+    text-align: left;
+    padding-right: 5rem;
+  }
+
+  &:nth-child(even) {
+    text-align: right;
+    padding-left: 5rem;
+  }
+
+  @include screen(tablet) {
+    &:nth-child(odd) {
+      text-align: right;
+    }
+
+    &:nth-child(even) {
+      text-align: left;
+    }
+  }
+}
