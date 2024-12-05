@@ -6,7 +6,7 @@ const loadComponent = async (name) => {
   }
 
   try {
-    const response = await fetch(`/components/${name}.html`)
+    const response = await fetch(`./components/${name}.html`)
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
     const html = await response.text()
     componentCache.set(name, html)

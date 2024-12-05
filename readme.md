@@ -40,8 +40,34 @@ pnpm -v  # Should be >= 8.15.8
 # Install dependencies
 pnpm i
 
-# Start development server
+# Start dev server with SCSS watch
 pnpm start
+
+```
+
+## 📦 Build
+
+### Tools
+
+- **rimraf**: Clean dist directory
+- **copyfiles**: Copy assets maintaining directory structure
+- **sass**: SCSS compilation and minification
+- **html-minifier**: HTML minification
+- **rollup**: JavaScript module bundling
+- **terser**: JavaScript minification
+
+### Commands
+
+```bash
+# Build for production
+pnpm build
+
+# Individual build steps
+pnpm clean          # Clean dist directory
+pnpm copy:assets    # Copy assets to dist
+pnpm build:css      # Compile and minify SCSS
+pnpm build:html     # Minify HTML
+pnpm build:js       # Bundle and minify JS
 
 ```
 
